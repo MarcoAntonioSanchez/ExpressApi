@@ -47,7 +47,7 @@ app.put("/v1/explorers/:id", (req, res) => {
 app.delete("/v1/explorers/:id", (req, res) => {
   console.log(`DELETE Explorers V1 API ${new Date()}`);
   // Add logic to delete the registry sent
-  res.status(200).json({ message: "Actualizado exitosamente" });
+  res.status(200).json({ message: "Eliminado exitosamente" });
 });
 
 // Initializig the app
