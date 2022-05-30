@@ -22,6 +22,20 @@ app.get("/v1/explorers", (req, res) => {
   res.status(200).json(explorers);
 });
 
+app.get("/v1/explorers/:id", (req, res) => {
+  console.log(`GET by ID Explorers V1 API ${new Date()}`);
+  const explorer1 = { id: 1, name: "Explorer_1" };
+  // HTTP code status 2:
+  res.status(200).json(explorer1);
+});
+
+app.post("/v1/explorers", (req, res) => {
+  console.log(`POST Explorers V1 API ${new Date()}`);
+  // Add logic to perssist
+  console.log(req.body); // Request parameters
+  res.status(201).json({ message: "Creado exitosamente" });
+});
+
 // Initializig the app
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
